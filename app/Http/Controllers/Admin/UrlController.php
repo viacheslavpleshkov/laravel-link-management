@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Skill;
+use App\Url;
 use App\Http\Requests\Url as Request;
 
 
@@ -16,8 +16,8 @@ class UrlController extends Controller
      */
     public function index()
     {
-        $main = Skill::all();
-        return view('admin.skills.index', compact('main'));
+        $main = Url::all();
+        return view('admin.urls.index', compact('main'));
     }
 
     /**
@@ -27,7 +27,7 @@ class UrlController extends Controller
      */
     public function create()
     {
-        return view('admin.skills.create');
+        return view('admin.urls.create');
     }
 
     /**
@@ -38,8 +38,8 @@ class UrlController extends Controller
      */
     public function store(Request $request)
     {
-        Skill::create($request->all());
-        return redirect()->route('skills.index')->with('success', __('admin.created-success'));
+        Url::create($request->all());
+        return redirect()->route('urls.index')->with('success', __('admin.created-success'));
     }
 
     /**
@@ -50,8 +50,8 @@ class UrlController extends Controller
      */
     public function show($id)
     {
-        $main = Skill::find($id);
-        return view('admin.skills.show', compact('main'));
+        $main = Url::find($id);
+        return view('admin.urls.show', compact('main'));
     }
 
     /**
@@ -62,8 +62,8 @@ class UrlController extends Controller
      */
     public function edit($id)
     {
-        $main = Skill::find($id);
-        return view('admin.skills.edit', compact('main'));
+        $main = Url::find($id);
+        return view('admin.urls.edit', compact('main'));
     }
 
     /**
@@ -75,8 +75,8 @@ class UrlController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Skill::find($id)->update($request->all());
-        return redirect()->route('skills.index')->with('success', __('admin.updated-success'));
+        Url::find($id)->update($request->all());
+        return redirect()->route('urls.index')->with('success', __('admin.updated-success'));
     }
 
     /**
@@ -87,7 +87,7 @@ class UrlController extends Controller
      */
     public function destroy($id)
     {
-        Skill::find($id)->delete();
-        return redirect()->route('skills.index')->with('success', __('admin.information-deleted'));
+        Url::find($id)->delete();
+        return redirect()->route('urls.index')->with('success', __('admin.information-deleted'));
     }
 }

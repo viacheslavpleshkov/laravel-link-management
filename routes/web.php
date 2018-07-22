@@ -22,7 +22,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
             Route::get('profile/{id}/password', 'ProfileController@password')->name('profile.password');
             Route::put('profile/{id}/updatepassword', 'ProfileController@updatepassword')->name('profile.updatepassword');
             Route::delete('profile/{id}', 'ProfileController@destroy')->name('profile.destroy');
-            Route::resource('url', 'UrlController');
+            Route::resource('urls', 'UrlController');
         });
         Route::group(['roles' => ['Admin']], function () {
             Route::resource('users', 'UserController');

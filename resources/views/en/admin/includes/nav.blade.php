@@ -10,6 +10,10 @@
                 <a class="nav-link" href="{{ route('admin.index') }}"><i class="fas fa-home"></i> {{ __('admin.home') }}
                 </a>
             </li>
+            <li class="nav-item {{ url()->current() == route('urls.index') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('urls.index') }}"><i class="fas fa-external-link-alt"></i> {{ __('admin.urls') }}
+                </a>
+            </li>
             @if(in_array(Auth::user()->role->name, ['Admin']))
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -33,7 +37,8 @@
                            href="{{ route('admin.settings') }}"><i
                                     class="fas fa-wrench"></i> {{ __('admin.settings') }}</a>
                         <a class="dropdown-item {{ Request::is('*logs*') ? 'active' : '' }}"
-                           href="{{ route('admin.logs') }}"><fa-cogsi
+                           href="{{ route('admin.logs') }}">
+                            <fa-cogsi
                                     class="fas fa-calendar"></fa-cogsi> {{ __('admin.logs') }}</a>
                     </div>
                 </li>

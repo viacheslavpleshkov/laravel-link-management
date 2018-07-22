@@ -1,6 +1,6 @@
 @extends('admin.layouts.main')
 
-@section('title',__('admin.skills'))
+@section('title',__('admin.urls'))
 
 @section('content')
     <div class="row justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -13,7 +13,7 @@
         </div>
         <div class="col-lg-3">
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('skills.create') }}">{{ __('admin.create-skills') }}</a>
+                <a class="btn btn-success" href="{{ route('urls.create') }}">{{ __('admin.create-urls') }}</a>
             </div>
         </div>
     </div>
@@ -22,10 +22,11 @@
         <table id="datatable" class="table table-striped table-bordered" style="width:100%">
             <thead>
             <tr>
-                <th scope="col">{{ __('admin.skills-id') }}</th>
-                <th scope="col">{{ __('admin.skills-title') }}</th>
-                <th scope="col">{{ __('admin.skills-level') }}</th>
-                <th scope="col">{{ __('admin.skills-status') }}</th>
+                <th scope="col">{{ __('admin.urls-id') }}</th>
+                <th scope="col">{{ __('admin.urls-si') }}</th>
+                <th scope="col">{{ __('admin.urls-level') }}</th>
+                <th scope="col">{{ __('admin.urls-level') }}</th>
+                <th scope="col">{{ __('admin.urls-status') }}</th>
                 <th scope="col"></th>
             </tr>
             </thead>
@@ -43,9 +44,9 @@
                         @endif
                     </td>
                     <td scope="row">
-                        <a href="{{ route('skills.show',$item->id) }}"><i class="far fa-eye"></i></a>
-                        <a href="{{ route('skills.edit',$item->id) }}"><i class="fas fa-edit"></i></a>
-                        <form action="{{ route('skills.destroy',$item->id) }}" method="POST">
+                        <a href="{{ route('urls.show',$item->id) }}"><i class="far fa-eye"></i></a>
+                        <a href="{{ route('urls.edit',$item->id) }}"><i class="fas fa-edit"></i></a>
+                        <form action="{{ route('urls.destroy',$item->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit"><i class="fas fa-trash-alt"></i></button>
