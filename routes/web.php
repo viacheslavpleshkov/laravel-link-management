@@ -42,7 +42,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
             Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->name('admin.logs');
         });
     });
-    Route::redirect('/', '/there', 301);
+    Route::redirect('/', 'admin', 301);
 });
 
 
