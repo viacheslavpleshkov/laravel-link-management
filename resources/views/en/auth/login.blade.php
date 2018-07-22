@@ -6,7 +6,6 @@
     <form method="post" action="{{ route('login') }}" class="form-signin">
         @csrf
         <div class="text-center mb-4">
-            <img class="mb-4" id="logo" src="{{ asset ('images/logo.jpg')}}" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">@yield('title')</h1>
         </div>
         @include('auth.includes.success')

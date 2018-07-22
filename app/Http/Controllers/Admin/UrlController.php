@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Contactwithme;
-use App\Http\Requests\Contactwithme as Request;
+use App\Skill;
+use App\Http\Requests\Url as Request;
 
 
-class ContactwithmeController extends Controller
+class UrlController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class ContactwithmeController extends Controller
      */
     public function index()
     {
-        $main = Contactwithme::all();
-        return view('admin.contact-with-me.index', compact('main'));
+        $main = Skill::all();
+        return view('admin.skills.index', compact('main'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ContactwithmeController extends Controller
      */
     public function create()
     {
-        return view('admin.contact-with-me.create');
+        return view('admin.skills.create');
     }
 
     /**
@@ -38,8 +38,8 @@ class ContactwithmeController extends Controller
      */
     public function store(Request $request)
     {
-        Contactwithme::create($request->all());
-        return redirect()->route('contact-with-me.index')->with('success', __('admin.created-success'));
+        Skill::create($request->all());
+        return redirect()->route('skills.index')->with('success', __('admin.created-success'));
     }
 
     /**
@@ -50,8 +50,8 @@ class ContactwithmeController extends Controller
      */
     public function show($id)
     {
-        $main = Contactwithme::find($id);
-        return view('admin.contact-with-me.show', compact('main'));
+        $main = Skill::find($id);
+        return view('admin.skills.show', compact('main'));
     }
 
     /**
@@ -62,8 +62,8 @@ class ContactwithmeController extends Controller
      */
     public function edit($id)
     {
-        $main = Contactwithme::find($id);
-        return view('admin.contact-with-me.edit', compact('main'));
+        $main = Skill::find($id);
+        return view('admin.skills.edit', compact('main'));
     }
 
     /**
@@ -75,8 +75,8 @@ class ContactwithmeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Contactwithme::find($id)->update($request->all());
-        return redirect()->route('contact-with-me.index')->with('success', __('admin.updated-success'));
+        Skill::find($id)->update($request->all());
+        return redirect()->route('skills.index')->with('success', __('admin.updated-success'));
     }
 
     /**
@@ -87,7 +87,7 @@ class ContactwithmeController extends Controller
      */
     public function destroy($id)
     {
-        Contactwithme::find($id)->delete();
-        return redirect()->route('contact-with-me.index')->with('success', __('admin.information-deleted'));
+        Skill::find($id)->delete();
+        return redirect()->route('skills.index')->with('success', __('admin.information-deleted'));
     }
 }

@@ -10,39 +10,6 @@
                 <a class="nav-link" href="{{ route('admin.index') }}"><i class="fas fa-home"></i> {{ __('admin.home') }}
                 </a>
             </li>
-            @if(in_array(Auth::user()->role->name, ['Moderator','Admin']))
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-edit"></i> {{ __('admin.edit-site') }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item {{ Request::is('*contact-with-me*') ? 'active' : '' }}"
-                           href="{{ route('contact-with-me.index') }}"><i
-                                    class="fas  fa-link"></i> {{ __('admin.contact-with-me') }}</a>
-                        <a class="dropdown-item {{ Request::is('*knowledge-of-languages*') ? 'active' : '' }}"
-                           href="{{ route('knowledge-of-languages.index') }}"><i
-                                    class="fas  fa-language"></i> {{ __('admin.knowledge-of-languages') }}</a>
-                        <a class="dropdown-item {{ Request::is('*educations*') ? 'active' : '' }}"
-                           href="{{ route('educations.index') }}"><i
-                                    class="fas fa-graduation-cap"></i> {{ __('admin.educations') }}
-                        </a>
-                        <a class="dropdown-item {{ Request::is('*about-me*') ? 'active' : '' }}"
-                           href="{{ route('about-me.index') }}"><i class="fas fa-user"></i> {{ __('admin.about-me') }}
-                        </a>
-                        <a class="dropdown-item {{ Request::is('*experiences*') ? 'active' : '' }}"
-                           href="{{ route('experiences.index') }}"><i
-                                    class="fas fa-building"></i> {{ __('admin.experiences') }}
-                        </a>
-                        <a class="dropdown-item {{ Request::is('*skills*') ? 'active' : '' }}"
-                           href="{{ route('skills.index') }}"><i class="fas fa-list"></i> {{ __('admin.skills') }}</a>
-                        <a class="dropdown-item {{ Request::is('*projects*') ? 'active' : '' }}"
-                           href="{{ route('projects.index') }}"><i
-                                    class="fas fa-briefcase"></i> {{ __('admin.projects') }}
-                        </a>
-                    </div>
-                </li>
-            @endif
             @if(in_array(Auth::user()->role->name, ['Admin']))
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
