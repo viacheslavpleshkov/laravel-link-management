@@ -1,0 +1,221 @@
+// Fonts
+@import "fonts";
+// Variables
+@import "variables";
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-solid';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-brands';
+@import '~@fortawesome/fontawesome-free-webfonts/scss/fa-regular';
+//Style
+/* ======= Base ======= */
+body {
+  font-family: "Roboto", sans-serif;
+  color: $color-original;
+  background: #f5f5f5;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+  color: $color-original;
+}
+
+a {
+  color: $color-original;
+}
+
+.background {
+  background: #fff;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.fa, .fab, .fas, .far {
+  margin-right: 5px;
+}
+
+.pg {
+  padding-left: 0;
+  padding-right: 0;
+  background: #4a6978;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+/* ======= /Base ======= */
+/* ======= Left ======= */
+.profile-container {
+  background: $color-original;
+  padding: 30px;
+}
+
+.profile-container img {
+  border-radius: 200px;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-container h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.profile-container h3 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*/profile-container*/
+/*div-container*/
+.div-container {
+  background: #4a6978;
+  color: #fff;
+  padding: 30px 30px 1px 30px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.link li {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.div-container a {
+  color: #fff;
+}
+
+.container-block-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.container-degree {
+  font-size: 14px;
+}
+
+.container-meta {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#fr {
+  padding: 30px;
+}
+
+/*div-container*/
+/*RIGHT*/
+.main {
+  padding: 30px 30px 0 30px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  color: $color-original;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ======= experience =======*/
+.experiences-section .item {
+  margin-bottom: 30px;
+}
+
+.upper-row {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+
+.job-title {
+  color: #3f4650;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #97aac3;
+}
+
+.company {
+  margin-bottom: 10px;
+  color: #97aac3;
+}
+
+/* =======/experience======= */
+/* ======= skillset ======= */
+.skillset .item {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.skillset .level-title {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.skillset .progress {
+  height: 12px;
+}
+
+.skillset .progress-bar {
+  height: 12px;
+  background-color: #4a6978;
+}
+
+@media (min-width: 992px) {
+  .skillset .level-title {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+
+/* ======= skillset ======= */
+/* ======= footer ======= */
+.footer {
+  padding: 30px;
+}
+
+.copyright {
+  line-height: 1.6;
+  color: $color-original;
+  font-size: 90%;
+  padding: 30px;
+}
+
+/*footer*/
