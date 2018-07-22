@@ -38,7 +38,12 @@ class UrlController extends Controller
      */
     public function store(Request $request)
     {
-        Url::create($request->all());
+        Url::create([
+            'url_key' => $request->url_key,
+            'url_site' => $request->url_site,
+            'views' => 0,
+            'status' => $request->status,
+        ]);
         return redirect()->route('urls.index')->with('success', __('admin.created-success'));
     }
 

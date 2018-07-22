@@ -23,9 +23,9 @@
             <thead>
             <tr>
                 <th scope="col">{{ __('admin.urls-id') }}</th>
-                <th scope="col">{{ __('admin.urls-si') }}</th>
-                <th scope="col">{{ __('admin.urls-level') }}</th>
-                <th scope="col">{{ __('admin.urls-level') }}</th>
+                <th scope="col">{{ __('admin.urls-url_key') }}</th>
+                <th scope="col">{{ __('admin.urls-url_site') }}</th>
+                <th scope="col">{{ __('admin.urls-views') }}</th>
                 <th scope="col">{{ __('admin.urls-status') }}</th>
                 <th scope="col"></th>
             </tr>
@@ -34,8 +34,9 @@
             @foreach($main as $item)
                 <tr>
                     <th scope="row">{{ $item->id }}</th>
-                    <td scope="row">{{ $item->title }}</td>
-                    <td scope="row">{{ $item->level }}%</td>
+                    <td scope="row">{{ url('/') }}/url/{{ $item->url_key }}</td>
+                    <td scope="row">{{ $item->url_site }}</td>
+                    <td scope="row">{{ $item->views }}</td>
                     <td scope="row">
                         @if($item->status)
                             {{ __('admin.enabled') }}

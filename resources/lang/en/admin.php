@@ -19,15 +19,16 @@ return [
     'home-hello' => 'Hello',
     'home-welcome' => 'Improve your skills every day.)',
     'home-url' => 'Go to the site',
-    //Skills
+    //Urls
     'create-urls' => 'Create url',
     'show-urls' => 'Show url',
     'edit-urls' => 'Edit url',
     'urls-id' => 'ID',
-    'urls-title' => 'Title',
-    'urls-level' => 'Level',
-    'urls-enter-title' => 'Enter title',
-    'urls-enter-level' => 'Enter level',
+    'urls-url_key' => 'Url key',
+    'urls-url_site' => 'Url site',
+    'urls-views' => 'Views',
+    'urls-enter-url_key' => 'Enter url key',
+    'urls-enter-url_site' => 'Enter url site',
     'urls-status' => 'Status',
     //Users
     'create-users' => 'Create user',

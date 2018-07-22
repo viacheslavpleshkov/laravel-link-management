@@ -18,8 +18,10 @@ class CreateUrlsTable extends Migration
             $table->string('url_key');
             $table->string('url_site');
             $table->integer('views');
+            $table->unsignedInteger('user_id');
             $table->integer('status');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('user');
         });
     }
 
