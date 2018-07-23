@@ -22,7 +22,6 @@
         <table id="datatable" class="table table-striped table-bordered" style="width:100%">
             <thead>
             <tr>
-                <th scope="col">{{ __('admin.urls-id') }}</th>
                 <th scope="col">{{ __('admin.urls-url_key') }}</th>
                 <th scope="col">{{ __('admin.urls-url_site') }}</th>
                 <th scope="col">{{ __('admin.urls-views') }}</th>
@@ -33,7 +32,6 @@
             <tbody>
             @foreach($main as $item)
                 <tr>
-                    <th scope="row">{{ $item->id }}</th>
                     <td scope="row">{{ url('/') }}/url/{{ $item->url_key }}</td>
                     <td scope="row">{{ $item->url_site }}</td>
                     <td scope="row">{{ $item->views }}</td>

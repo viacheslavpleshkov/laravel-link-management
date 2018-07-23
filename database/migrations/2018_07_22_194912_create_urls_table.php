@@ -21,7 +21,7 @@ class CreateUrlsTable extends Migration
             $table->unsignedInteger('user_id');
             $table->integer('status');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Url;
 use App\Http\Requests\Url as Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class UrlController extends Controller
 {
@@ -16,7 +16,7 @@ class UrlController extends Controller
      */
     public function index()
     {
-        $main = Url::all();
+        $main = Url::where('user_id', Auth::user()->id)->get();
         return view('admin.urls.index', compact('main'));
     }
 
@@ -42,6 +42,7 @@ class UrlController extends Controller
             'url_key' => $request->url_key,
             'url_site' => $request->url_site,
             'views' => 0,
+            'user_id' => Auth::user()->id,
             'status' => $request->status,
         ]);
         return redirect()->route('urls.index')->with('success', __('admin.created-success'));
@@ -55,8 +56,11 @@ class UrlController extends Controller
      */
     public function show($id)
     {
-        $main = Url::find($id);
-        return view('admin.urls.show', compact('main'));
+        if (Url::where('user_id', Auth::user()->id)) {
+            $main = Url::find($id);
+            return view('admin.urls.show', compact('main'));
+        } else
+            abort(403);
     }
 
     /**
@@ -67,8 +71,11 @@ class UrlController extends Controller
      */
     public function edit($id)
     {
-        $main = Url::find($id);
-        return view('admin.urls.edit', compact('main'));
+        if (Url::where('user_id', Auth::user()->id)) {
+            $main = Url::find($id);
+            return view('admin.urls.edit', compact('main'));
+        } else
+            abort(403);
     }
 
     /**
@@ -80,8 +87,15 @@ class UrlController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Url::find($id)->update($request->all());
-        return redirect()->route('urls.index')->with('success', __('admin.updated-success'));
+        if (Url::where('user_id', Auth::user()->id)) {
+            Url::find($id)->update([
+                'url_key' => $request->url_key,
+                'url_site' => $request->url_site,
+                'status' => $request->status
+            ]);
+            return redirect()->route('urls.index')->with('success', __('admin.updated-success'));
+        } else
+            abort(403);
     }
 
     /**
@@ -92,7 +106,10 @@ class UrlController extends Controller
      */
     public function destroy($id)
     {
-        Url::find($id)->delete();
-        return redirect()->route('urls.index')->with('success', __('admin.information-deleted'));
+        if (Url::where('user_id', Auth::user()->id)) {
+            Url::find($id)->delete();
+            return redirect()->route('urls.index')->with('success', __('admin.information-deleted'));
+        } else
+            abort(403);
     }
 }
