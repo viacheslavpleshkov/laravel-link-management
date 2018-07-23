@@ -3,12 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Cache;
-use App;
-use App\Aboutme;
-use App\Experience;
-use App\Skill;
-use App\Project;
+use App\Url;
 
 class SiteController extends Controller
 {
@@ -19,15 +14,15 @@ class SiteController extends Controller
      */
     public function index()
     {
-        if (Cache::has('site.index')) {
-            $main = Cache::get('site.index');
-        } else {
-            $main['aboutme'] = Aboutme::where('status', 1)->get();
-            $main['experiences'] = Experience::where('status', 1)->orderBy('id', 'desc')->get();
-            $main['skills'] = Skill::where('status', 1)->get();
-            $main['projects'] = Project::where('status', 1)->get();
-            Cache::put('site.index', $main, 2880);
-        }
-        return view('site.index', compact('main'));
+
+    }
+
+    public function url($url)
+    {
+        if ($main = Url::where('url_key', $url)->where('status', 1)->first())
+            return redirect($main->url_site);
+        else
+            abort(404);
+
     }
 }

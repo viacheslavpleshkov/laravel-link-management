@@ -35,10 +35,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         });
     });
     Route::namespace('Site')->group(function () {
-
+        Route::get('/', 'SiteController@index')->name('site.index');
+        Route::get('url/{url}', 'SiteController@url')->name('site.url');
     });
-    Route::redirect('/', 'admin', 301);
-
 });
 
 
