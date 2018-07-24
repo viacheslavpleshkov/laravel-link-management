@@ -20,19 +20,19 @@ class SiteController extends Controller
 
     public function submit(Request $request)
     {
-        Url::create([
-            'url_site'=> "$request->url_site",
-            'user_id'=> 1,
-            'views'=> 0,
+        $id = Url::create([
+            'url_site' => $request->url_site,
+            'user_id' => 1,
+            'views' => 0,
             'status' => 1,
         ]);
-        return redirect()->route('site.anonymous',$id);
+        return redirect()->route('site.anonymous', $id->id);
     }
 
     public function anonymous($id)
     {
-        if ($main = Url::where('id', $id)->where('status', 1)->first())
-            return view('site.pages.',compact($main));
+        if ($main = Url::where('id', $id)->where('status', 1)->where('user_id', 1)->first())
+            return view('site.pages.anonymous', compact('main'));
         else
             abort(404);
     }
