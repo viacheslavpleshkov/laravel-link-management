@@ -12,7 +12,6 @@
     <form method="post" action="{{ route('password.email') }}" class="form-signin">
         @csrf
         <div class="text-center mb-4">
-            <img class="mb-4" id="logo" src="{{ asset ('images/logo.jpg')}}" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">@yield('title')</h1>
         </div>
 
@@ -45,7 +44,6 @@
         <div class="text-center">
             <button class="btn btn-lg btn-primary btn-block"
                     type="submit">{{ __('auth.send-password-reset-link') }}</button>
-            <a class="btn btn-link" href="{{ route('site.index') }}">{{ __('auth.back-to-the-site') }}</a>
             <a class="btn btn-link" href="{{ route('login') }}">{{ __('auth.login') }}</a>
             <a class="btn btn-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>
         </div>

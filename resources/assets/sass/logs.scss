@@ -105,3 +105,13 @@ a.llv-active {
 .page-link:hover {
   color: $color-original;
 }
+
+.btn-original {
+  color: $color-white;
+  background-color: $color-original;
+  border-color: $color-original;
+}
+
+.btn-original:hover {
+  color: $color-white;
+}

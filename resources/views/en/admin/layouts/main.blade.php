@@ -18,7 +18,6 @@
     <meta name="theme-color" content="#bd2d2d">
     <link href="{{ asset ('css/admin.css')}}" rel="stylesheet">
 </head>
-
 <body>
 <header>
     @include('admin.includes.nav')

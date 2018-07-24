@@ -16959,11 +16959,11 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-(function webpackMissingModule() { throw new Error("Cannot find module \"/var/www/laravel-url-minifier/resources/assets/sass/site.scss\""); }());
 __webpack_require__(9);
 __webpack_require__(10);
 __webpack_require__(11);
-module.exports = __webpack_require__(12);
+__webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ }),
@@ -16998,6 +16998,12 @@ __webpack_require__(2);
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

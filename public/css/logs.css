@@ -14822,3 +14822,13 @@ a.llv-active {
   color: #bd2d2d;
 }
 
+.btn-original {
+  color: #fff;
+  background-color: #bd2d2d;
+  border-color: #bd2d2d;
+}
+
+.btn-original:hover {
+  color: #fff;
+}
+

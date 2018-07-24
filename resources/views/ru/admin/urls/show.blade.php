@@ -1,14 +1,14 @@
 @extends('admin.layouts.main')
 
-@section('title',__('admin.show-skills'))
+@section('title',__('admin.show-urls'))
 
 @section('content')
     @include('admin.includes.title')
     <ul class="nav mb-md-3">
         <li>
-            <a href="{{ route('skills.index') }}" class="btn btn-dark">{{ __('admin.back') }}</a>
-            <a href="{{ route('skills.edit', $main->id) }}" class="btn btn-primary">{{ __('admin.update') }}</a>
-            <form action="{{ route('skills.destroy', $main->id) }}" method="POST">
+            <a href="{{ route('urls.index') }}" class="btn btn-dark">{{ __('admin.back') }}</a>
+            <a href="{{ route('urls.edit', $main->id) }}" class="btn btn-primary">{{ __('admin.update') }}</a>
+            <form action="{{ route('urls.destroy', $main->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">{{ __('admin.delete') }}</button>
@@ -17,19 +17,19 @@
     </ul>
     <table class="table">
         <tr>
-            <th>{{ __('admin.skills-id') }}</th>
-            <td>{{ $main->id }}</td>
+            <th>{{ __('admin.urls-url_key') }}</th>
+            <td>{{ url('/') .'/url/'.$main->id }}</td>
         </tr>
         <tr>
-            <th>{{ __('admin.skills-title') }}</th>
-            <td>{{ $main->title }}</td>
+            <th>{{ __('admin.urls-url_site') }}</th>
+            <td>{{ $main->url_site }}</td>
         </tr>
         <tr>
-            <th>{{ __('admin.skills-level') }}</th>
-            <td>{{ $main->level }}</td>
+            <th>{{ __('admin.urls-views') }}</th>
+            <td>{{ $main->views }}</td>
         </tr>
         <tr>
-            <th>{{ __('admin.skills-status') }}</th>
+            <th>{{ __('admin.urls-status') }}</th>
             <td>
                 @if($main->status)
                     {{ __('admin.enabled') }}

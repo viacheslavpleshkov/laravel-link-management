@@ -90,6 +90,7 @@ code {
   width: 49%;
   margin-top: .5rem;
 }
+
 //btn
 .btn-github {
   color: $color-white;
@@ -130,11 +131,13 @@ code {
 .btn-twitter:hover {
   color: $color-white;
 }
+
 .btn-original {
   color: $color-white;
   background-color: $color-original;
   border-color: $color-original;
 }
+
 .btn-original:hover {
   color: $color-white;
 }
