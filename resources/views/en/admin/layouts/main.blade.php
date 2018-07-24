@@ -8,13 +8,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title') | {{__('admin.admin-panel')}}</title>
     <link rel="author" href="{{ asset ('humans.txt')}}"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset ('apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset ('favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset ('favicon-16x16.png')}}">
-    <link rel="manifest" href="{{ asset ('site.webmanifest')}}">
-    <link rel="mask-icon" href="{{ asset ('safari-pinned-tab.svg')}}" color="#4a6978">
-    <meta name="msapplication-TileColor" content="#4a6978">
-    <meta name="theme-color" content="#4a6978">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bd2d2d">
+    <meta name="msapplication-TileColor" content="#bd2d2d">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#bd2d2d">
     <link href="{{ asset ('css/admin.css')}}" rel="stylesheet">
 </head>
 
@@ -28,7 +29,7 @@
 </main>
 <footer class="footer">
     <div class="container text-center">
-        <span class="text-muted">Slava Pleshkov ©2016-{{ date('Y') }}. All rights reserved.</span>
+        <span class="text-muted">Link management ©{{ date('Y') }}. All rights reserved.</span>
     </div>
 </footer>
 <script src="{{ asset('js/admin.js') }}"></script>

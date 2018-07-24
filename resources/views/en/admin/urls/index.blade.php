@@ -13,7 +13,7 @@
         </div>
         <div class="col-lg-3">
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('urls.create') }}">{{ __('admin.create-urls') }}</a>
+                <a class="btn btn-original" href="{{ route('urls.create') }}">{{ __('admin.create-urls') }}</a>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
             <tbody>
             @foreach($main as $item)
                 <tr>
-                    <td scope="row">{{ url('/') }}/url/{{ $item->url_key }}</td>
+                    <td scope="row">{{ url('/') .'/url/'.$item->id }}</td>
                     <td scope="row">{{ $item->url_site }}</td>
                     <td scope="row">{{ $item->views }}</td>
                     <td scope="row">

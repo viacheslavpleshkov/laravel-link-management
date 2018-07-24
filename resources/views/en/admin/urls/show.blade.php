@@ -17,12 +17,8 @@
     </ul>
     <table class="table">
         <tr>
-            <th>{{ __('admin.urls-id') }}</th>
-            <td>{{ $main->id }}</td>
-        </tr>
-        <tr>
             <th>{{ __('admin.urls-url_key') }}</th>
-            <td>{{ $main->url_key }}</td>
+            <td>{{ url('/') .'/url/'.$main->id }}</td>
         </tr>
         <tr>
             <th>{{ __('admin.urls-url_site') }}</th>

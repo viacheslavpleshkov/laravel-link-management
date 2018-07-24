@@ -51,6 +51,6 @@
             @endif
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('admin.edit') }}</button>
+        <button class="btn btn-lg btn-original btn-block" type="submit">{{ __('admin.edit') }}</button>
     </form>
 @endsection

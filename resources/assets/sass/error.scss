@@ -6,7 +6,7 @@
 @import '~bootstrap/scss/bootstrap';
 //Style
 body {
-  font-family: Roboto, sans-serif;
+  font-family: $font-family-original;
   margin: 0;
   overflow-x: hidden;
   font-weight: 300;
@@ -18,14 +18,14 @@ body {
 }
 
 a {
-  color: #ffffff;
+  color: $color-white;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #ffffff;
+  color: $color-white;
   text-decoration: underline;
 }
 
@@ -53,11 +53,11 @@ error-box {
 }
 
 .text-h1 {
-  color: #4a6978 !important
+  color: $color-original !important
 }
 
 .text-muted {
-  color: #4a6978 !important
+  color: $color-original !important
 }
 
 .m-b-40 {
@@ -73,9 +73,8 @@ error-box {
 }
 
 .btn {
-  background: #4a6978;
+  background: $color-original;
 }
-
 @media only screen and (max-width: 520px) {
   .error-body h1 {
     font-size: 110px;

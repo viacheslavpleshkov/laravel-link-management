@@ -39,7 +39,6 @@ class UrlController extends Controller
     public function store(Request $request)
     {
         Url::create([
-            'url_key' => $request->url_key,
             'url_site' => $request->url_site,
             'views' => 0,
             'user_id' => Auth::user()->id,
@@ -89,7 +88,6 @@ class UrlController extends Controller
     {
         if (Url::where('user_id', Auth::user()->id)) {
             Url::find($id)->update([
-                'url_key' => $request->url_key,
                 'url_site' => $request->url_site,
                 'status' => $request->status
             ]);

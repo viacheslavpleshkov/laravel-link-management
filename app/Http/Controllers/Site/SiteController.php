@@ -19,7 +19,7 @@ class SiteController extends Controller
 
     public function url($url)
     {
-        if ($main = Url::where('url_key', $url)->where('status', 1)->first())
+        if ($main = Url::where('id', $url)->where('status', 1)->first())
             return redirect($main->url_site);
         else
             abort(404);

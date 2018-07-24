@@ -13,7 +13,7 @@
         </div>
         <div class="col-lg-3">
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('users.create') }}">{{ __('admin.create-users') }}</a>
+                <a class="btn btn-original" href="{{ route('users.create') }}">{{ __('admin.create-users') }}</a>
             </div>
         </div>
     </div>

@@ -7,15 +7,6 @@
     @include('admin.includes.error')
     <form action="{{ route('urls.store') }}" method="POST">
         @csrf
-        <div class="form-group">
-            <label>{{ __('admin.urls-url_key') }}</label>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">{{ url('/') }}/url/</span>
-                </div>
-                <input type="text" class="form-control" name="url_key" value="{{ old('url_key') }}"
-                       placeholder="{{ __('admin.urls-enter-url_key') }}" required></div>
-        </div>
 
         <div class="form-group">
             <label>{{ __('admin.urls-url_site') }}</label>
@@ -38,6 +29,6 @@
             </select>
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('admin.create') }}</button>
+        <button class="btn btn-lg btn-original btn-block" type="submit">{{ __('admin.create') }}</button>
     </form>
 @endsection

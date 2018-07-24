@@ -10,7 +10,7 @@
                 <a class="nav-link" href="{{ route('admin.index') }}"><i class="fas fa-home"></i> {{ __('admin.home') }}
                 </a>
             </li>
-            <li class="nav-item {{ url()->current() == route('urls.index') ? 'active' : '' }}">
+            <li class="nav-item {{ Request::is('*urls*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('urls.index') }}"><i class="fas fa-external-link-alt"></i> {{ __('admin.urls') }}
                 </a>
             </li>

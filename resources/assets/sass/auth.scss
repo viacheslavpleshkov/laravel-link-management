@@ -12,9 +12,8 @@
 
 html,
 body {
+  font-family: $font-family-original;
   height: 100%;
-  font-family: "Roboto", sans-serif;
-
 }
 
 body {
@@ -24,7 +23,7 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background-color: $color-gray-white;
 }
 
 .form-signin {
@@ -52,7 +51,7 @@ body {
   width: 100%;
   margin-bottom: 0; /* Override default `<label>` margin */
   line-height: 1.5;
-  color: #495057;
+  color: $color-original;
   border: 1px solid transparent;
   border-radius: .25rem;
   transition: all .1s ease-in-out;
@@ -87,7 +86,7 @@ body {
   padding-top: calc(var(--input-padding-y) / 3);
   padding-bottom: calc(var(--input-padding-y) / 3);
   font-size: 12px;
-  color: #777;
+  color: $color-original;
 }
 
 #logo {
@@ -102,41 +101,41 @@ body {
 }
 
 .btn-github {
-  color: #fff;
-  background-color: #292d32;
-  border-color: #292d32;
+  color: $color-white;
+  background-color: $color-github;
+  border-color: $color-github;
 }
 
 .btn-github:hover {
-  color: #fff;
+  color: $color-white;
 }
 
 .btn-google {
-  color: #fff;
-  background-color: #f6002c;
-  border-color: #f6002c;
+  color: $color-white;
+  background-color: $color-google;
+  border-color: $color-google;
 }
 
 .btn-google:hover {
-  color: #fff;
+  color: $color-white;
 }
 
 .btn-facebook {
-  color: #fff;
-  background-color: #49459e;
-  border-color: #49459e;
+  color: $color-white;
+  background-color: $color-facebook;
+  border-color: $color-facebook;
 }
 
 .btn-facebook:hover {
-  color: #fff;
+  color: $color-white;
 }
 
 .btn-twitter {
-  color: #fff;
-  background-color: #00a2f0;
-  border-color: #00a2f0;
+  color: $color-white;
+  background-color: $color-twitter;
+  border-color: $color-twitter;
 }
 
 .btn-twitter:hover {
-  color: #fff;
+  color: $color-white;
 }
