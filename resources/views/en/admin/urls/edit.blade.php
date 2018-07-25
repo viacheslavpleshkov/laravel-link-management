@@ -25,13 +25,23 @@
                 <label>{{ __('admin.urls-views') }}</label>
                 <input type="text" class="form-control" name="views" value="{{ $main->views }}" required>
             </div>
+
+            <div class="form-group">
+                <label>{{ __('admin.urls-created') }}</label>
+                <input type="text" class="form-control" name="created" value="{{ $main->created_at }}" required>
+            </div>
         </fieldset>
 
         <div class="form-group">
             <label>{{ __('admin.urls-status') }}</label>
             <select class="form-control" name="status" required>
-                <option value="1">{{ __('admin.enabled') }}</option>
-                <option value="0">{{ __('admin.disabled') }}</option>
+                @if($main->status)
+                    <option value="1">{{ __('admin.enabled') }}</option>
+                    <option value="0">{{ __('admin.disabled') }}</option>
+                @else
+                    <option value="0">{{ __('admin.disabled') }}</option>
+                    <option value="1">{{ __('admin.enabled') }}</option>
+                @endif
             </select>
         </div>
 

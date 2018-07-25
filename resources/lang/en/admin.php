@@ -27,6 +27,7 @@ return [
     'urls-url_key' => 'Url key',
     'urls-url_site' => 'Url site',
     'urls-views' => 'Views',
+    'urls-created' => 'Created',
     'urls-enter-url_key' => 'Enter url key',
     'urls-enter-url_site' => 'Enter url site',
     'urls-status' => 'Status',

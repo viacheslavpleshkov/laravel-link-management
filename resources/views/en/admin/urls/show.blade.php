@@ -29,6 +29,10 @@
             <td>{{ $main->views }}</td>
         </tr>
         <tr>
+            <th>{{ __('admin.urls-created') }}</th>
+            <td>{{ $main->created_at }}</td>
+        </tr>
+        <tr>
             <th>{{ __('admin.urls-status') }}</th>
             <td>
                 @if($main->status)

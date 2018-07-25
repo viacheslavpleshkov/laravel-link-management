@@ -13,8 +13,8 @@ return [
     'profile' => 'Профіль',
     'logout' => 'Вийти',
     //home
-    'home-title' => 'Unleash The Power of The Link',
-    'home-text' => 'The link is the invisible thread that connects every customer interaction to tell a greater story.',
+    'home-title' => 'Розкрити силу посилання',
+    'home-text' => 'Посилання - невидима нитка, яка з\'єднує кожне взаємодія з клієнтом, щоб розповісти велику історію.',
     'home-placeholder' => 'Вставте посилання, щоб скоротити його',
     'home-submit' => 'Скоротити',
     //anonymous
