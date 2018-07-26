@@ -72,6 +72,7 @@
                class="btn btn-lg btn-facebook group ml-1">{{ __('auth.login-with-facebook') }}</a>
             <a href="{{ url('admin/socialite/twitter') }}"
                class="btn btn-lg btn-twitter group ml-1">{{ __('auth.login-with-twitter') }}</a>
+            <a class="btn btn-link" href="{{ route('site.index') }}">{{ __('auth.back-to-the-site') }}</a>
             <a class="btn btn-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>
             <a class="btn btn-link" href="{{ route('password.request') }}">{{ __('auth.forgot-your-password') }}</a>
         </div>
