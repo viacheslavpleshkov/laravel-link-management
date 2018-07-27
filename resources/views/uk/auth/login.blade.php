@@ -64,13 +64,13 @@
 
         <div class="text-center">
             <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('auth.login') }}</button>
-            <a href="{{ url('admin/socialite/github') }}"
+            <a href="{{ url('auth/socialite/github') }}"
                class="btn btn-lg btn-github group ml-1">{{ __('auth.login-with-github') }}</a>
-            <a href="{{ url('admin/socialite/google') }}"
+            <a href="{{ url('auth/socialite/google') }}"
                class="btn btn-lg btn-google group ml-1">{{ __('auth.login-with-google+') }}</a>
-            <a href="{{ url('admin/socialite/facebook') }}"
+            <a href="{{ url('auth/socialite/facebook') }}"
                class="btn btn-lg btn-facebook group ml-1">{{ __('auth.login-with-facebook') }}</a>
-            <a href="{{ url('admin/socialite/twitter') }}"
+            <a href="{{ url('auth/socialite/twitter') }}"
                class="btn btn-lg btn-twitter group ml-1">{{ __('auth.login-with-twitter') }}</a>
             <a class="btn btn-link" href="{{ route('site.index') }}">{{ __('auth.back-to-the-site') }}</a>
             <a class="btn btn-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>
