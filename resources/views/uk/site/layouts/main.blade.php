@@ -17,6 +17,7 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#bd2d2d">
     <link href="{{ asset ('css/site.css')}}" rel="stylesheet">
+    {!! NoCaptcha::renderJs('uk') !!}
 </head>
 <body>
 @include('site.include.nav')
