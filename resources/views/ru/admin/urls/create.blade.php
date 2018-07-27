@@ -22,7 +22,7 @@
         </fieldset>
 
         <div class="form-group">
-            <label>{{ __('admin.urls-status') }}</label>
+            <label>{{ __('admin.status') }}</label>
             <select class="form-control" name="status" required>
                 <option value="1">{{ __('admin.enabled') }}</option>
                 <option value="0">{{ __('admin.disabled') }}</option>

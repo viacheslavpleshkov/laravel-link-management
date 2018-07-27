@@ -25,15 +25,15 @@
                 <th scope="col">{{ __('admin.urls-url_key') }}</th>
                 <th scope="col">{{ __('admin.urls-url_site') }}</th>
                 <th scope="col">{{ __('admin.urls-views') }}</th>
-                <th scope="col">{{ __('admin.urls-created') }}</th>
-                <th scope="col">{{ __('admin.urls-status') }}</th>
+                <th scope="col">{{ __('admin.created') }}</th>
+                <th scope="col">{{ __('admin.status') }}</th>
                 <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
             @foreach($main as $item)
                 <tr>
-                    <td scope="row">{{ url('/') .'/url/'.$item->id }}</td>
+                    <td scope="row">{{ route('site.url', $item->id) }}</td>
                     <td scope="row">{{ $item->url_site }}</td>
                     <td scope="row">{{ $item->views }}</td>
                     <td scope="row">{{ $item->created_at }}</td>

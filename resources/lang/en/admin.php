@@ -27,10 +27,8 @@ return [
     'urls-url_key' => 'Url key',
     'urls-url_site' => 'Url site',
     'urls-views' => 'Views',
-    'urls-created' => 'Created',
     'urls-enter-url_key' => 'Enter url key',
     'urls-enter-url_site' => 'Enter url site',
-    'urls-status' => 'Status',
     //Users
     'create-users' => 'Create user',
     'show-users' => 'Show user',
@@ -107,4 +105,7 @@ return [
     'created-success' => 'Created successfully.',
     'updated-success' => 'Updated successfully.',
     'information-deleted' => 'Information has been deleted.',
+    'status' => 'Status',
+    'created' => 'Created',
+    'updated' => 'Updated',
 ];

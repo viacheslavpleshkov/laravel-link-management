@@ -1,6 +1,6 @@
 <?php
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
-    Route::group(['prefix' => 'admin', 'namespace' => 'Auth'], function () {
+    Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
         Route::get('login', 'LoginController@showLoginForm')->name('login');
         Route::post('login', 'LoginController@login');
         Route::post('logout', 'LoginController@logout')->name('logout');
@@ -13,14 +13,14 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::get('socialite/{provider}', 'AuthController@redirectToProvider');
         Route::get('socialite/{provider}/callback', 'AuthController@handleProviderCallback');
     });
-    Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'roles'], 'block' => ['null']], function () {
+    Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'roles'], 'block' => ['null']], function () {
         Route::group(['roles' => ['User', 'Author', 'Moderator', 'Admin']], function () {
             Route::get('/', 'AdminController@index')->name('admin.index');
             Route::get('profile', 'ProfileController@index')->name('profile.index');
             Route::get('profile/{id}/edit', 'ProfileController@edit')->name('profile.edit');
-            Route::put('profile/{id}/updateedit', 'ProfileController@updateedit')->name('profile.updateedit');
+            Route::put('profile/{id}/edit', 'ProfileController@updateedit');
             Route::get('profile/{id}/password', 'ProfileController@password')->name('profile.password');
-            Route::put('profile/{id}/updatepassword', 'ProfileController@updatepassword')->name('profile.updatepassword');
+            Route::put('profile/{id}/password', 'ProfileController@updatepassword');
             Route::delete('profile/{id}', 'ProfileController@destroy')->name('profile.destroy');
             Route::resource('urls', 'UrlController');
         });
@@ -37,8 +37,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     Route::namespace('Site')->group(function () {
         Route::get('/', 'SiteController@index')->name('site.index');
         Route::put('/', 'SiteController@submit');
-        Route::get('anonymous/{id}', 'SiteController@anonymous')->name('site.anonymous');
-        Route::get('url/{id}', 'SiteController@url')->name('site.url');
+        Route::get('anonymous/{id}', 'SiteController@anonymous')->name('site.anonymous')->where('id', '[\w\d\-\_]+');
+        Route::get('url/{id}', 'SiteController@url')->name('site.url')->where('id', '[\w\d\-\_]+');
     });
 });
 

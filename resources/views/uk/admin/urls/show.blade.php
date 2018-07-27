@@ -18,7 +18,7 @@
     <table class="table">
         <tr>
             <th>{{ __('admin.urls-url_key') }}</th>
-            <td>{{ url('/') .'/url/'.$main->id }}</td>
+            <td>{{ route('site.url', $main->id) }}</td>
         </tr>
         <tr>
             <th>{{ __('admin.urls-url_site') }}</th>
@@ -29,11 +29,11 @@
             <td>{{ $main->views }}</td>
         </tr>
         <tr>
-            <th>{{ __('admin.urls-created') }}</th>
+            <th>{{ __('admin.created') }}</th>
             <td>{{ $main->created_at }}</td>
         </tr>
         <tr>
-            <th>{{ __('admin.urls-status') }}</th>
+            <th>{{ __('admin.status') }}</th>
             <td>
                 @if($main->status)
                     {{ __('admin.enabled') }}

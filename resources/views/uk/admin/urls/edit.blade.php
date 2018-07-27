@@ -27,13 +27,13 @@
             </div>
 
             <div class="form-group">
-                <label>{{ __('admin.urls-created') }}</label>
+                <label>{{ __('admin.created') }}</label>
                 <input type="text" class="form-control" name="created" value="{{ $main->created_at }}" required>
             </div>
         </fieldset>
 
         <div class="form-group">
-            <label>{{ __('admin.urls-status') }}</label>
+            <label>{{ __('admin.status') }}</label>
             <select class="form-control" name="status" required>
                 @if($main->status)
                     <option value="1">{{ __('admin.enabled') }}</option>

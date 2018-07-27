@@ -25,7 +25,6 @@ return [
     'urls-views' => 'Просмотры',
     'urls-enter-url_key' => 'Введите ключ URL',
     'urls-enter-url_site' => 'Введите URL-адрес',
-    'urls-status' => 'Статус',
     //Users
     'create-users' => 'Создать пользователя',
     'show-users' => 'Показать пользователя',
@@ -102,4 +101,7 @@ return [
     'created-success' => 'Создан успешно.',
     'updated-success' => 'Успешно обновлено.',
     'information-deleted' => 'Информация удалена.',
+    'status' => 'Статус',
+    'created' => 'Создано',
+    'updated' => 'Изменено',
 ];
