@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-param" content="_csrf-frontend">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@if(!route('site.index')): @yield('title') |  @endif{{__('site.title')}}</title>
+    <title>@if(url()->current() != route('site.index')) @yield('title') |  @endif{{__('site.title')}}</title>
     <link rel="author" href="{{ asset ('humans.txt')}}"/>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icons/favicon-32x32.png') }}">
