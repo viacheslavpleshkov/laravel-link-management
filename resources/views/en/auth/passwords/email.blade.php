@@ -3,18 +3,16 @@
 @section('title', __('auth.reset-password-title'))
 
 @section('content')
-    @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @endif
-
     <form method="post" action="{{ route('password.email') }}" class="form-signin">
         @csrf
         <div class="text-center mb-4">
             <h1 class="h3 mb-3 font-weight-normal">@yield('title')</h1>
         </div>
-
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         <div class="form-group row">
             <label class="col-sm-4 col-form-label">{{ __('auth.e-mail-address') }}</label>
             <div class="col-sm-8">

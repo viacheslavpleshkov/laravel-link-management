@@ -17,9 +17,7 @@ class ResetPasswordController extends Controller
     | explore this trait and override any methods you wish to tweak.
     |
     */
-
     use ResetsPasswords;
-
     /**
      * Where to redirect users after resetting their password.
      *
@@ -35,5 +33,15 @@ class ResetPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    protected function rules()
+    {
+        return [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed|min:6',
+            'g-recaptcha-response' => 'required|captcha'
+        ];
     }
 }
