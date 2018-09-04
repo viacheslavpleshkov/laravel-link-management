@@ -25,5 +25,6 @@ return [
     'anonymous-views' => 'Перегляди',
     'anonymous-created' => 'Створено',
     //general
-    'title' => 'Керування посиланнями'
+    'title' => 'Керування посиланнями',
+    'admin-panel' => 'Панель адміністратора',
 ];

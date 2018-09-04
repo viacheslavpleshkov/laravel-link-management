@@ -25,5 +25,7 @@ return [
     'anonymous-views' => 'Views',
     'anonymous-created' => 'Created',
     //general
-    'title' => 'Link management'
+    'title' => 'Link management',
+    'admin-panel' => 'Admin Panel',
+
 ];

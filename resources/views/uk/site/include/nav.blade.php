@@ -10,6 +10,13 @@
                 <a class="nav-link" href="{{ route('site.index') }}"><i class="fas fa-home"></i> {{ __('admin.home') }}
                 </a>
             </li>
+            @auth
+                <li class="nav-item {{ url()->current() == route('admin.index') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.index') }}"><i
+                                class="fas fa-unlock"></i> {{ __('site.admin-panel') }}
+                    </a>
+                </li>
+            @endif
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item dropdown">

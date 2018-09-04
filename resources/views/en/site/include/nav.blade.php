@@ -10,6 +10,13 @@
                 <a class="nav-link" href="{{ route('site.index') }}"><i class="fas fa-home"></i> {{ __('admin.home') }}
                 </a>
             </li>
+            @auth
+                <li class="nav-item {{ url()->current() == route('admin.index') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('admin.index') }}"><i
+                                class="fas fa-unlock"></i> {{ __('site.admin-panel') }}
+                    </a>
+                </li>
+            @endif
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
@@ -29,7 +36,8 @@
             @guest
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                       aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> {{ __('site.profile') }}</a>
+                       aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> {{ __('site.profile') }}
+                    </a>
                     <div class="dropdown-menu">
                         <a href="{{ route('login') }}"
                            class="dropdown-item {{ url()->current() == route('login') ? 'active' : '' }}">{{ __('site.login') }}</a>
