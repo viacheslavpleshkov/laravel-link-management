@@ -24,46 +24,6 @@
                 @endif</td>
         </tr>
         <tr>
-            <th>{{ __('admin.profile-github') }}</th>
-            <td>
-                @if( $main->github_id )
-                    {{ __('admin.enabled') }}
-                @else
-                    {{ __('admin.disabled') }}
-                @endif
-            </td>
-        </tr>
-        <tr>
-            <th>{{ __('admin.profile-google') }}</th>
-            <td>
-                @if( $main->google_id )
-                    {{ __('admin.enabled') }}
-                @else
-                    {{ __('admin.disabled') }}
-                @endif
-            </td>
-        </tr>
-        <tr>
-            <th>{{ __('admin.profile-facebook') }}</th>
-            <td>
-                @if( $main->facebook_id )
-                    {{ __('admin.enabled') }}
-                @else
-                    {{ __('admin.disabled') }}
-                @endif
-            </td>
-        </tr>
-        <tr>
-            <th>{{ __('admin.profile-twitter') }}</th>
-            <td>
-                @if( $main->twitter_id )
-                    {{ __('admin.enabled') }}
-                @else
-                    {{ __('admin.disabled') }}
-                @endif
-            </td>
-        </tr>
-        <tr>
             <th>{{ __('admin.profile-role') }}</th>
             <td>{{ $main->role->name }}</td>
         </tr>

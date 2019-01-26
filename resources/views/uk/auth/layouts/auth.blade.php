@@ -21,7 +21,6 @@
     <meta name="msapplication-config" content="{{ asset ('icons/browserconfig.xml') }}">
     <meta name="theme-color" content="#bd2d2d">
     <link href="{{ asset ('css/auth.css')}}" rel="stylesheet">
-    {!! NoCaptcha::renderJs('uk') !!}
 </head>
 <body>
 @yield('content')

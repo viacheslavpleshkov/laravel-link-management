@@ -25,7 +25,6 @@ class Site extends FormRequest
     {
         return [
             'url_site' => 'required',
-            'g-recaptcha-response' => 'required|captcha'
         ];
     }
 }

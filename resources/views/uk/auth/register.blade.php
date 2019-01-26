@@ -63,28 +63,8 @@
             </div>
         </div>
 
-        <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-4 col-form-label">{{ __('auth.captcha') }}</label>
-            <div class="col-sm-8">
-                {!! NoCaptcha::display(['data-theme' => 'light','data-size'=>'normal']) !!}
-                @if ($errors->has('g-recaptcha-response'))
-                    <span class="text-danger">
-                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                    </span>
-                @endif
-            </div>
-        </div>
-
         <div class="text-center">
             <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('auth.register') }}</button>
-            <a class="btn btn-lg btn-github btn-block"
-               href="{{ url('admin/socialite/github') }}">{{ __('auth.register-with-github') }}</a>
-            <a class="btn btn-lg btn-google btn-block"
-               href="{{ url('admin/socialite/google') }}">{{ __('auth.register-with-google+') }}</a>
-            <a class="btn btn-lg btn-facebook btn-block"
-               href="{{ url('admin/socialite/facebook') }}">{{ __('auth.register-with-facebook') }}</a>
-            <a class="btn btn-lg btn-twitter btn-block"
-               href="{{ url('admin/socialite/twitter') }}">{{ __('auth.register-with-twitter') }}</a>
             <a class="btn btn-link" href="{{ route('site.index') }}">{{ __('auth.back-to-the-site') }}</a>
             <a class="btn btn-link" href="{{ route('login') }}">{{ __('auth.login') }}</a>
             <a class="btn btn-link" href="{{ route('password.request') }}">{{ __('auth.forgot-your-password') }}</a>

@@ -49,21 +49,8 @@
             </div>
         </div>
 
-        <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-4 col-form-label">{{ __('auth.captcha') }}</label>
-            <div class="col-sm-8">
-                {!! NoCaptcha::display(['data-theme' => 'light','data-size'=>'normal']) !!}
-                @if ($errors->has('g-recaptcha-response'))
-                    <span class="text-danger">
-                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                </span>
-                @endif
-            </div>
-        </div>
-
         <div class="text-center">
-            <button class="btn btn-lg btn-primary btn-block"
-                    type="submit">{{ __('auth.reset-password') }}</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('auth.reset-password') }}</button>
             <a class="btn btn-link" href="{{ route('site.index') }}">{{ __('auth.back-to-the-site') }}</a>
             <a class="btn btn-link" href="{{ route('login') }}">{{ __('auth.login') }}</a>
             <a class="btn btn-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>

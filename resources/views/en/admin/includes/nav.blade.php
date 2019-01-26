@@ -33,13 +33,7 @@
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-cogs"></i> {{ __('admin.settings') }}</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item {{ Request::is('*settings*') ? 'active' : '' }}"
-                           href="{{ route('admin.settings') }}"><i
-                                    class="fas fa-wrench"></i> {{ __('admin.settings') }}</a>
-                        <a class="dropdown-item {{ Request::is('*logs*') ? 'active' : '' }}"
-                           href="{{ route('admin.logs') }}">
-                            <fa-cogsi
-                                    class="fas fa-calendar"></fa-cogsi> {{ __('admin.logs') }}</a>
+                        <a class="dropdown-item {{ Request::is('*settings*') ? 'active' : '' }}" href="{{ route('admin.settings') }}"><i class="fas fa-wrench"></i> {{ __('admin.settings') }}</a>
                     </div>
                 </li>
             @endif
@@ -51,12 +45,9 @@
                     <i class="fas fa-globe"></i> {{ __('admin.site-language') }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item {{ Request::is('en*') ? 'active' : '' }}"
-                       href="{{ url('en/admin') }}">{{ __('admin.english') }}</a>
-                    <a class="dropdown-item {{ Request::is('uk*') ? 'active' : '' }}"
-                       href="{{ url('uk/admin') }}">{{ __('admin.ukrainian') }}</a>
-                    <a class="dropdown-item {{ Request::is('ru*') ? 'active' : '' }}"
-                       href="{{ url('ru/admin') }}">{{ __('admin.russian') }}</a>
+                    <a class="dropdown-item {{ Request::is('en*') ? 'active' : '' }}" href="{{ url('en/admin') }}">{{ __('admin.english') }}</a>
+                    <a class="dropdown-item {{ Request::is('uk*') ? 'active' : '' }}" href="{{ url('uk/admin') }}">{{ __('admin.ukrainian') }}</a>
+                    <a class="dropdown-item {{ Request::is('ru*') ? 'active' : '' }}" href="{{ url('ru/admin') }}">{{ __('admin.russian') }}</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -65,12 +56,8 @@
                     <i class="fas fa-user"></i> {{ Auth::user()->name }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item {{ url()->current() == route('profile.index') ? 'active' : '' }}"
-                       href="{{ route('profile.index') }}"><i
-                                class="far fa-user-circle"></i> {{ __('admin.profile') }}</a>
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
-                                class="fas fa-sign-out-alt"></i> {{ __('admin.logout') }}</a>
+                    <a class="dropdown-item {{ url()->current() == route('profile.index') ? 'active' : '' }}" href="{{ route('profile.index') }}"><i class="far fa-user-circle"></i> {{ __('admin.profile') }}</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i> {{ __('admin.logout') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>

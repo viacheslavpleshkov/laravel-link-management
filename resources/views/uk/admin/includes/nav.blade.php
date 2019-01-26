@@ -36,10 +36,6 @@
                         <a class="dropdown-item {{ Request::is('*settings*') ? 'active' : '' }}"
                            href="{{ route('admin.settings') }}"><i
                                     class="fas fa-wrench"></i> {{ __('admin.settings') }}</a>
-                        <a class="dropdown-item {{ Request::is('*logs*') ? 'active' : '' }}"
-                           href="{{ route('admin.logs') }}">
-                            <fa-cogsi
-                                    class="fas fa-calendar"></fa-cogsi> {{ __('admin.logs') }}</a>
                     </div>
                 </li>
             @endif

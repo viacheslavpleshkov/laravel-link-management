@@ -10,8 +10,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
         Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
         Route::post('password/reset', 'ResetPasswordController@reset');
-        Route::get('socialite/{provider}', 'AuthController@redirectToProvider');
-        Route::get('socialite/{provider}/callback', 'AuthController@handleProviderCallback');
     });
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'roles'], 'block' => ['null']], function () {
         Route::group(['roles' => ['User', 'Author', 'Moderator', 'Admin']], function () {
@@ -31,7 +29,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
             Route::get('roles/{id}/edit', 'RoleController@edit')->name('roles.edit');
             Route::put('roles/{id}', 'RoleController@update')->name('roles.update');
             Route::get('settings', 'AdminController@settings')->name('admin.settings');
-            Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->name('admin.logs');
         });
     });
     Route::namespace('Site')->group(function () {

@@ -38,18 +38,6 @@
         </div>
 
         <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-4 col-form-label">{{ __('auth.captcha') }}</label>
-            <div class="col-sm-8">
-                {!! NoCaptcha::display(['data-theme' => 'light','data-size'=>'normal']) !!}
-                @if ($errors->has('g-recaptcha-response'))
-                    <span class="text-danger">
-                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                </span>
-                @endif
-            </div>
-        </div>
-
-        <div class="form-group row">
             <div class="col-sm-4">{{ __('auth.login-checkbox') }}</div>
             <div class="col-sm-8">
                 <div class="form-check">
@@ -64,14 +52,6 @@
 
         <div class="text-center">
             <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('auth.login') }}</button>
-            <a href="{{ url('auth/socialite/github') }}"
-               class="btn btn-lg btn-github group ml-1">{{ __('auth.login-with-github') }}</a>
-            <a href="{{ url('auth/socialite/google') }}"
-               class="btn btn-lg btn-google group ml-1">{{ __('auth.login-with-google+') }}</a>
-            <a href="{{ url('auth/socialite/facebook') }}"
-               class="btn btn-lg btn-facebook group ml-1">{{ __('auth.login-with-facebook') }}</a>
-            <a href="{{ url('auth/socialite/twitter') }}"
-               class="btn btn-lg btn-twitter group ml-1">{{ __('auth.login-with-twitter') }}</a>
             <a class="btn btn-link" href="{{ route('site.index') }}">{{ __('auth.back-to-the-site') }}</a>
             <a class="btn btn-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>
             <a class="btn btn-link" href="{{ route('password.request') }}">{{ __('auth.forgot-your-password') }}</a>

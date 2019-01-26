@@ -10,20 +10,11 @@
             @csrf
             @method('PUT')
             <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control" name="url_site"
-                           placeholder="{{ __('site.home-placeholder') }}" required>
+                <div class="col-md-10 mb-3">
+                    <input type="text" class="form-control" name="url_site" placeholder="{{ __('site.home-placeholder') }}" required>
                     @if ($errors->has('url_site'))
                         <span class="text-danger">
                             <strong>{{ $errors->first('url_site') }}</strong>
-                        </span>
-                    @endif
-                </div>
-                <div class="col-md-4 mb-3">
-                    {!! NoCaptcha::display(['data-theme' => 'light','data-size'=>'normal']) !!}
-                    @if ($errors->has('g-recaptcha-response'))
-                        <span class="text-danger">
-                            <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
                         </span>
                     @endif
                 </div>
