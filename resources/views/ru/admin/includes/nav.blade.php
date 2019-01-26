@@ -48,7 +48,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item {{ Request::is('en*') ? 'active' : '' }}"
-                       href="{{ url('en/admin') }}">{{ __('admin.english') }}</a>
+                       href="{{ url('/admin') }}">{{ __('admin.english') }}</a>
                     <a class="dropdown-item {{ Request::is('uk*') ? 'active' : '' }}"
                        href="{{ url('uk/admin') }}">{{ __('admin.ukrainian') }}</a>
                     <a class="dropdown-item {{ Request::is('ru*') ? 'active' : '' }}"
