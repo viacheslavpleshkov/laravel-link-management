@@ -3,17 +3,18 @@
         <img src="https://laravel.com/assets/img/components/logo-laravel.svg" height="100px">
     </a>
     <a href="https://laravellinkmanagement.slavapleshkov.com/" target="_blank">
-        <img src="https://laravellinkmanagement.slavapleshkov.com/images/logo.jpg" height="100px">
+        <img src="https://github.com/slava-pleshkov/laravel-link-management/blob/master/public/images/logo.jpg?raw=true" height="100px">
     </a>
     <h1 align="center">laravel-link-management</h1>
     <br>
 </p>
-<p align="center">Link management was created using the Laravel Framework</p>
+<p align="center">🔗 Link management was created using the Laravel 5.7 Framework</p>
 
 
 ## Installation Dev
 
 1. Clone the repo and `cd` into it
+1. Create users and table in PostgreSQL
 1. Run this command `composer install`
 1. Rename or copy `.env.example` file to `.env`
 1. Run this command `php artisan key:generate`
@@ -32,7 +33,7 @@
 ## Installation Production
 
 1. Clone the repo and `cd` into it
-1. Create users and table in MySQL
+1. Create users and table in PostgreSQL
 1. Configure Nginx with these settings `nginx.conf`
 1. Run this command `composer install`
 1. Rename or copy `.env.example` file to `.env`
@@ -60,7 +61,7 @@
 1. Run this command `heroku config:set APP_DEBUG=secret`
 1. Run this command `heroku config:set TELESCOPE_ENABLED=secret`
 1. Run this command `heroku config:set APP_URL=secret`
-1. Run this command `heroku config:set LOG_CHANNEL=stack`
+1. Run this command `heroku config:set LOG_CHANNEL=errorlog`
 1. Run this command `heroku config:set DB_CONNECTION=pgsql`
 1. Run this command `heroku config:set DB_HOST=secret`
 1. Run this command `heroku config:set DB_PORT=secret`

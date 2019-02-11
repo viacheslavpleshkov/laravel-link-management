@@ -2,7 +2,7 @@
   "name": "Link management",
   "description": "Link management was created using the Laravel 5.7 Framework",
   "repository": "https://github.com/slava-pleshkov/laravel-link-management",
-  "logo": "https://laravellinkmanagement.slavapleshkov.com/images/logo.jpg",
+  "logo": "https://github.com/slava-pleshkov/laravel-link-management/blob/master/public/images/logo.jpg?raw=true",
   "keywords": [
     "php",
     "laravel",
