@@ -58,6 +58,7 @@ HTML5, SCSS, JavaScript, jQuery, Bootstrap, Font Awesome, Webpack, Yarn, PHP, La
 1. Run this command `heroku buildpacks:set heroku/php`
 1. Run this command `heroku buildpacks:set heroku/nodejs`
 1. Run this command `heroku addons:create heroku-postgresql:hobby-dev`
+1. Run this command `heroku addons:create "heroku-redis:hobby-dev`
 1. Run this command `heroku config:set APP_NAME=Link management`
 1. Run this command `heroku config:set APP_ENV=production`
 1. Run this command `heroku config:set APP_KEY=secret`
