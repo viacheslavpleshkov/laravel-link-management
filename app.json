@@ -1,6 +1,6 @@
 {
   "name": "Link management",
-  "description": "Link management was created using the Laravel 5.7 Framework",
+  "description": "Link management was created using the Laravel 5.8 Framework",
   "repository": "https://github.com/slava-pleshkov/laravel-link-management",
   "logo": "https://github.com/slava-pleshkov/laravel-link-management/blob/master/public/images/logo.jpg?raw=true",
   "keywords": [
@@ -52,10 +52,10 @@
       "value": "log"
     },
     "CACHE_DRIVER": {
-      "value": "file"
+      "value": "redis"
     },
     "SESSION_DRIVER": {
-      "value": "database"
+      "value": "redis"
     },
     "SESSION_LIFETIME": {
       "value": "120"
@@ -91,6 +91,9 @@
   "addons": [
     {
       "plan": "heroku-postgresql"
+    },
+    {
+      "plan": "heroku-redis"
     }
   ],
   "buildpacks": [

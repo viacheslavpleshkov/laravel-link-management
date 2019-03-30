@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\User;
+use App\Models\User;
 use App\Http\Requests\Profileedit as RequestEdit;
 use App\Http\Requests\Profilepassword as RequestPassword;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
-class ProfileController extends Controller
+class ProfileController extends BaseController
 {
     /**
      * Display a listing of the resAboProfileProfileutmeource.

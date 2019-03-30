@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Url;
+use App\Models\Url;
 use App\Http\Requests\Url as Request;
 use Illuminate\Support\Facades\Auth;
 
-class UrlController extends Controller
+class UrlController extends BaseController
 {
     /**
      * Display a listing of the resource.

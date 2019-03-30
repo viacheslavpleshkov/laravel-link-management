@@ -14,7 +14,7 @@ class CreateUrlsTable extends Migration
     public function up()
     {
         Schema::create('urls', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('url_site');
             $table->integer('views');
             $table->unsignedInteger('user_id');

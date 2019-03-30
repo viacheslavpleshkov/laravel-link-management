@@ -2,14 +2,17 @@
     <a href="https://laravel.com/" target="_blank">
         <img src="https://laravel.com/assets/img/components/logo-laravel.svg" height="100px">
     </a>
-    <a href="https://laravellinkmanagement.slavapleshkov.com/" target="_blank">
+    <a href="https://sp-laravel-link-management.herokuapp.com/" target="_blank">
         <img src="https://github.com/slava-pleshkov/laravel-link-management/blob/master/public/images/logo.jpg?raw=true" height="100px">
     </a>
     <h1 align="center">laravel-link-management</h1>
     <br>
 </p>
-<p align="center">🔗 Link management was created using the Laravel 5.7 Framework</p>
+<p align="center">🔗 Link management was created using the Laravel 5.8 Framework</p>
 
+## Used technologies
+
+HTML5, SCSS, JavaScript, jQuery, Bootstrap, Font Awesome, Webpack, Yarn, PHP, Laravel Framework, Laravel Eloquent, Laravel Blade, Composer, Redis, PostgreSQL.
 
 ## Installation Dev
 
@@ -69,8 +72,8 @@
 1. Run this command `heroku config:set DB_USERNAME=secret`
 1. Run this command `heroku config:set DB_PASSWORD=secret`
 1. Run this command `heroku config:set BROADCAST_DRIVER=log`
-1. Run this command `heroku config:set CACHE_DRIVER=file`
-1. Run this command `heroku config:set SESSION_DRIVER=database`
+1. Run this command `heroku config:set CACHE_DRIVER=redis`
+1. Run this command `heroku config:set SESSION_DRIVER=redis`
 1. Run this command `heroku config:set SESSION_LIFETIME=120`
 1. Run this command `heroku config:set QUEUE_DRIVER=sync`
 1. Run this command `heroku config:set MAIL_DRIVER=secret`
@@ -86,3 +89,7 @@
 or
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+## License
+
+Collision is an open-sourced software licensed under the [MIT license](LICENSE.md).
